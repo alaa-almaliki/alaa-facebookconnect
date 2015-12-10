@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="top.links">
+            <action method="addLink" translate="label title" module="alaa_facebookconnect">
+                <label>Login with Facebook</label>
+                <url helper="alaa_facebookconnect/publicProfile/getFacebookLoginUrl"/>
+                <title>Login with Facebook</title>
+                <prepare/>
+                <urlParams/>
+                <position>200</position>
+            </action>
+        </reference>
+    </default>
+    <customer_logged_in>
+        <reference name="top.links">
+            <action method="removeLinkByUrl"><url helper="alaa_facebookconnect/publicProfile/getFacebookLoginUrl" /></action>
+        </reference>
+    </customer_logged_in>
+
+    <alaa_facebookconnect_index_error>
+        <reference name="content">
+            <block type="core/template"
+                   name="alaa_facebookconnect_error"
+                   as="alaa_facebookconnect_error"
+                   template="alaa_facebookconnect/error.phtml" />
+        </reference>
+    </alaa_facebookconnect_index_error>
+
+    <alaa_facebookconnect_index_comingsoon>
+        <reference name="content">
+            <block type="core/template"
+                   name="alaa_facebookconnect_coming_soon"
+                   as="alaa_facebookconnect_coming_soon"
+                   template="alaa_facebookconnect/coming-soon.phtml" />
+        </reference>
+    </alaa_facebookconnect_index_comingsoon>
+</layout>

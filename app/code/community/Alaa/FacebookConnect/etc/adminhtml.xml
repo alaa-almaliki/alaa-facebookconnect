@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adminhtml>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <alaa_facebookconnect>
+                                        <title>Facebook</title>
+                                    </alaa_facebookconnect>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <customer>
+            <children>
+                <alaa_facebookconnect>
+                    <title>Facebook Connect</title>
+                    <sort_order>200</sort_order>
+                    <children>
+                        <alaa_facebookconnect_users>
+                            <title>Facebook Users</title>
+                            <sort_order>10</sort_order>
+                            <action>alaa_facebookconnect_admin/index</action>
+                        </alaa_facebookconnect_users>
+                    </children>
+                    <children>
+                        <alaa_facebookconnect_settings>
+                            <title>Facebook Settings</title>
+                            <sort_order>20</sort_order>
+                            <action>adminhtml/system_config/edit/section/alaa_facebookconnect</action>
+                        </alaa_facebookconnect_settings>
+                    </children>
+                </alaa_facebookconnect>
+            </children>
+        </customer>
+    </menu>
+</adminhtml>
