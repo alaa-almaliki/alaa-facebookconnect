@@ -1,4 +1,4 @@
-# Facebook Connect 
+# Magento Facebook Connect 
 
 An extension based on facebook sdk version-5, it allows customers to login with facebook on Magento platform. It is a Login with Facebook functionality only. It is also managed from the admin panel in `Admin > Customers > Facebook Connect`, so facebook users can be mass activated/deactivated or deleted along with the associated customers. 
 
